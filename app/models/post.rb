@@ -3,13 +3,11 @@ class Post < ApplicationRecord
   has_many :likes, foreign_key: 'post_id'
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
 
-  def post_counter_update(user)
-    user_object = User.where(id: user.id)[0]
-    if user_object.posts_counter.nil?
-      User.where(id: user.id).update(posts_counter: 1)
-    else
-      User.where(id: user.id).update(posts_counter: user_object.posts_counter + 1)
-    end
+  after_save :update_post_counter
+
+  private
+  def update_post_counter
+    User.increment!(:posts_counter)
   end
 
   def show_post_comments(post)
