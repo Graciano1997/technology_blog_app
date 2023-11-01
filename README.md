@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h1><b>Technology Blog App</b></h1>
+  <h1><b>Technology Blog App : processing data in models</b></h1>
 
 </div>
 
@@ -31,7 +31,7 @@
 # 📖 Technology Blog App <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
-A Ruby on Rails application, but in this milestone we focused on building all the project migrates that will sustain the project business logic !
+A Ruby on Rails application, but in this milestone we focused on processing data in models !
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
