@@ -28,7 +28,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Technology Blog App <a name="about-project"></a>
+# 📖 Technology Blog App <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
 A Ruby on Rails application, but in this milestone we focused on building all the project migrates that will sustain the project business logic !
