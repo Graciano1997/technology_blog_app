@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h1><b>Technology Blog App</b></h1>
+<h1><b>Technology Blog App : add validations and specs</b></h1>
 
 </div>
 
@@ -28,10 +28,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Technology Blog App <a name="about-project"></a>
+# 📖 Technology Blog App <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
-A Ruby on Rails application, but in this milestone we focused on building all the project migrates that will sustain the project business logic !
+A Ruby on Rails application, but in this milestone we focused on processing data in models !
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
@@ -83,14 +83,14 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```bash
-  git clone https://github.com/Graciano1997/blogApp.git
+  git clone https://github.com/Graciano1997/technology_blog_app.git
 ```
 ### Install
 
 Install this project with:
 
 ```bash
-  cd blogApp
+  cd technology_blog_app
   bundle install
 ```
 
@@ -125,7 +125,7 @@ it will install the required gemfile for running the project
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Graciano1997/blogApp/issues).
+Feel free to check the [issues page](https://github.com/Graciano1997/technology_blog_app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
