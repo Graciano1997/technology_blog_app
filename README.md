@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1><b>Technology Blog App : controllers</b></h1>
+<h1><b>Technology Blog App : controllers Request specs</b></h1>
 
 </div>
 
@@ -31,7 +31,7 @@
 # 📖 Technology Blog App <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
-A Ruby on Rails application, but in this milestone we focused on Controllers,routes and setup the basic views !
+A Ruby on Rails application, but in this milestone we focused on Controllers Request specs
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
