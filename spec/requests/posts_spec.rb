@@ -38,4 +38,9 @@ describe "GET user 's posts /" do
     get '/users/2/posts/1000'
     expect(response.body).not_to include('Hello Microsoft 👋 !, How is Bill Gate now ? ')
   end
+
+  it 'Should include <<Your User 2  and Post Id 1000>> ' do
+    get '/users/2/posts/1000'
+    expect(response.body).to include('Your User 2  and Post Id 1000')
+  end
 end
