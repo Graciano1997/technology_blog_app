@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
   def index
-    @id = params[:user_id]
+    @posts=Post.where(author_id: params[:id])
+    @user=User.find(params[:user_id])
   end
 
   def show
-    @user_id = params[:user_id]
-    @id = params[:id]
+    @id=params[:id]
+    @user=User.find(params[:user_id])
+    @post_item=Post.where(author_id: @user.id)[params[:id].to_i - 1] if params[:id].to_i
   end
 end

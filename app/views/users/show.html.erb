@@ -1,1 +1,8 @@
-<h1> Your User Id: <%= @id %></h1>
+<h1> Your User Id: <%= @user.id %></h1>
+<h1> Your User name: <%= @user.name%></h1>
+<h1> Your User Posts: <%= @user.posts_counter%></h1>
+<h1> Your User Recent Posts</h1>
+<%@user.user_recent_posts.each do |post|%>
+ <p>Post:: <%= post.text%></p>
+ <p>Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0%></p>
+<%end%>

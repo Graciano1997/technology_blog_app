@@ -1,1 +1,9 @@
-<h1>Your User <%= @user_id %>  and Post Id <%= @id%></h1>
+ <h1> Post#<%= @id %> by <%= @user.name %> </h1>
+<p>Comments:<%=@post_item.comments_counter%> and Likes: <%=@post_item.likes_counter%></p>
+<h1> Bio </h1>
+<p><%= @post_item.text%></p>
+
+<p>Comments</p>
+<% @post_item.show_post_comments(@post_item,true).each do |comment|%>
+<h2><%=comment.text %></h2>
+<%end%>

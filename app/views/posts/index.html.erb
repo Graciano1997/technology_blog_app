@@ -1,1 +1,21 @@
-<h1> Your User's <%= @id %> Posts </h1>
+
+ <h1> Your User's <%= @user.id %> Posts </h1>
+
+<h1> Your User's <%= @user.name %> Posts </h1>
+<p>Number of Posts <%=@user.posts_counter || 0 %></p>
+<br>
+<h3>User Bio:</h3>
+<p> <%=@user.bio%></p>
+
+
+<%@posts.each_with_index do |post,index|%>
+<h3>Post #<%= index + 1%></h3>
+<p><%= post.text %></p>
+<p>Comments <%= post.comments_counter || 0 %></p>
+<p>Likes <%= post.likes_counter || 0 %></p>
+<hr>
+<p>Comments</p>
+<% post.show_post_comments(post,nil).each do |comment|%>
+<h2><%=comment.text %></h2>
+<%end%>
+<%end%>
