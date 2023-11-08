@@ -2,7 +2,8 @@
 <h1> Your User name: <%= @user.name%></h1>
 <h1> Your User Posts: <%= @user.posts_counter%></h1>
 <h1> Your User Recent Posts</h1>
-<%@user.user_recent_posts.each do |post|%>
- <p>Post:: <%= post.text%></p>
+<%@user.user_recent_posts.each_with_index do |post,index|%>
+ <p>Post #<%=index+1%></p>
+ <p><%= post.text%></p>
  <p>Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0%></p>
 <%end%>
