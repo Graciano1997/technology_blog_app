@@ -1,9 +1,11 @@
- <h1> Post#<%= @id %> by <%= @user.name %> </h1>
-<p>Comments:<%=@post_item.comments_counter%> and Likes: <%=@post_item.likes_counter%></p>
-<h1> Bio </h1>
-<p><%= @post_item.text%></p>
-
-<p>Comments</p>
-<% @post_item.show_post_comments(@post_item,true).each do |comment|%>
-<h2><%=comment.text %></h2>
+<div class="postContainer borderRadio">
+<%= render partial: "posts/post_head", locals:{user:@user,post:@post_item,id:@id}%>
+<div class="postDescription">
+<%= @post_item.text%>
+</div>
+</div>
+<div class="comments">
+<% @post_item.show_post_comments(@post_item,nil).each do |comment|%>
+<%= render partial: "comments/comment", locals: {comment:comment, user:@user.find_user(comment.user_id)}%>
 <%end%>
+</div>

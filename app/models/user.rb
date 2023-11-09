@@ -7,4 +7,8 @@ class User < ApplicationRecord
   def user_recent_posts
     posts.order('created_at Desc').limit(3)
   end
+
+  def find_user(id)
+    User.find(id)
+  end
 end
