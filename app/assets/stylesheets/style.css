@@ -1,5 +1,5 @@
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
 }
 
@@ -14,34 +14,34 @@ body {
   grid-template-columns: 15fr 85fr;
   align-items: center;
   column-gap: 30px;
-  padding:1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
 }
 
 .postItemContainer {
-  padding:1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
   margin: 1rem 0 1rem 0;
 }
 
 .userInformation {
-  padding:1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
 }
 
 .userBio {
-margin-bottom: 2rem;
-
+  margin-bottom: 2rem;
 }
 
-.borderRadio{
+.borderRadio {
   border: 1px solid black;
   border-radius: 8px;
-  padding:1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
 }
 
-#bio{
-  margin-top:1rem;
+#bio {
+  margin-top: 1rem;
 }
 
-.userPhotograph,.postItemContainer {
+.userPhotograph,
+.postItemContainer {
   border: 1px solid black;
   border-radius: 8px;
 }
@@ -60,9 +60,10 @@ margin-bottom: 2rem;
   border-radius: 8px;
 }
 
-.userDetails h2 a { text-decoration: none;}
+.userDetails h2 a { text-decoration: none; }
+
 #numberPosts {
-margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 #postsIndex {
@@ -73,7 +74,8 @@ margin-top: 3rem;
   text-align: end;
 }
 
-.seeAll,.pagination {
+.seeAll,
+.pagination {
   margin-top: 3rem;
   display: flex;
   justify-content: center;
@@ -85,7 +87,7 @@ margin-top: 3rem;
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  background-color:rgb(7, 0, 0);
+  background-color: rgb(7, 0, 0);
   color: #d3c3c3;
 }
 
@@ -96,23 +98,23 @@ margin-top: 3rem;
 .comments {
   border: 0.1px dashed black;
   border-radius: 8px;
-  padding:1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
 }
 
 .commentItemContainer {
   display: flex;
-  justify-content: baseline;
   gap: 8px;
   padding: 5px 0 5px 0;
 }
 
-#commentor,#author {
+#commentor,
+#author {
   font-weight: 700;
 }
 
-.postHeader{
+.postHeader {
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .userInfo {
