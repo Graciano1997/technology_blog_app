@@ -5,7 +5,7 @@
 </div>
 
 <div class="userDetails">
-<h2>User  <%=user.name%></h2>
+<h2><a href=<%="/users/#{user.id}/"%>>User  <%=user.name%></a></h2>
 <p id="numberPosts">Number of posts <%=user.posts_counter || 0%></p>
 </div>
 </div>

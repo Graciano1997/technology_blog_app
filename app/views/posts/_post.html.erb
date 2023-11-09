@@ -1,0 +1,5 @@
+<div class="postItemContainer">
+ <p id="postsIndex">Post #<%=index+1%></p>
+ <p><%= post.text%></p>
+ <p id="postStatistic">Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0%></p>
+</div>
