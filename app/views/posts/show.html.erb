@@ -5,7 +5,7 @@
 </div>
 </div>
 <div class="comments">
-<% @post_item.show_post_comments(@post_item,true).each do |comment|%>
+<% @post_item.show_post_comments(@post_item,all_comments:true).each do |comment|%>
 <%= render partial: "comments/comment", locals: {comment:comment, user:@user.find_user(comment.user_id)}%>
 <%end%>
 </div>

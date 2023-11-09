@@ -4,7 +4,7 @@
 <div class="postCommentsContainer">
 <%= render partial: "posts/post", locals: {post:post, index:index}%>
 <div class="comments">
-<% post.show_post_comments(post,false).each do |comment|%>
+<% post.show_post_comments(post).each do |comment|%>
 <%= render partial: "comments/comment", locals: {comment:comment, user:@user.find_user(comment.user_id)}%>
 <%end%>
 </div>
