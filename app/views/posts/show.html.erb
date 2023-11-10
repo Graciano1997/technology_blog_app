@@ -6,6 +6,7 @@
 </div>
 <div class="comments">
 <% @post_item.show_post_comments(@post_item,all_comments:true).each do |comment|%>
-<%= render partial: "comments/comment", locals: {comment:comment, user:@user.find_user(comment.user_id)}%> 
+<%= render partial: "comments/comment", locals: {comment:comment, user:@user.find_user(comment.user_id)}%>
 <%end%>
+ <%= render partial:"comments/form",locals: {user: @user, post: @post_item, comment: @comment, id:@id}%>
 </div>

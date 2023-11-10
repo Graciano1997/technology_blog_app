@@ -1,27 +1,16 @@
 class CommentsController < ApplicationController
-  def index
-    @user = User.find(params[:user_id])
-    @user_posts = Post.where(author_id: params[:user_id]).all
-  end
-
-  def show
-    @id = params[:id]
-    @user = User.find(params[:user_id])
-    @post_item = [params[:post_id].to_i - 1] if params[:id].to_i
-  end
-
   def new
     @user=self.current_user
-    @comment = @user.comments.new
-    @post_item = [params[:post_id].to_i - 1]
+    @post =Post.all[params[:post_id].to_i - 1]
+    @comment = @user.posts[params[:post_id].to_i - 1].comments.new
   end
 
-  # def create
-  #     @post = Post.create(author: self.current_user, title: params[:post][:title], text: params[:post][:text],comments_counter:0,likes_counter:0)
-  #     if(@post.new_record?)
-  #     redirect_to '/users/1/comments/new', flash: { wrong: "Upps! Comment was not created." }
-  #     else
-  #     redirect_to '/users/1/comments/new', flash: { success: "Comment was successfully created." }
-  #     end
-  # end
+  def create
+     @comment = Comment.create(text: params[:comment][:text],user:self.current_user,post_id:params[:post_id])
+     if(@comment.new_record?)
+      redirect_to "/users/#{params[:user_id]}/posts/#{params[:comment][:url_id]}", flash: { wrong: "Upps! Comment was not created." }
+     else
+      redirect_to "/users/#{params[:user_id]}/posts/#{params[:comment][:url_id]}", flash: { success: "Comment was successfully created." }
+    end
+   end
 end

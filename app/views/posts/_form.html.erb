@@ -1,9 +1,7 @@
 <section class="formSection">
   <%= form_with(model: [user, post]) do |form| %>
-    <%= form.label :title, "Post's Title" %>
-    <%= form.text_field :title %>
-    <%= form.label :text, "Post's Text" %>
-    <%= form.text_area :text, size: "60x20" %>
+    <%= form.text_field :title, placeholder:"Post's Title" %>
+    <%= form.text_area :text, size: "60x20", placeholder: "Post's Text" %>
     <%= form.submit "Create" %>
   <% end %>
   <div>

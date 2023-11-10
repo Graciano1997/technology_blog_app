@@ -8,6 +8,7 @@ class PostsController < ApplicationController
     @id = params[:id]
     @user = User.find(params[:user_id])
     @post_item = Post.where(author_id: @user.id)[params[:id].to_i - 1] if params[:id].to_i
+    @comment = @user.posts[params[:post_id].to_i - 1].comments.new
   end
 
   def new

@@ -83,7 +83,10 @@
 
 .seeAll button,
 .pagination button,
-.formSection form input[type="submit"] {
+.formSection form input[type="submit"],
+.postOperations a p,
+.likeButton
+{
   border: transparent;
   padding: 1rem;
   border-radius: 8px;
@@ -91,6 +94,17 @@
   background-color: rgb(7, 0, 0);
   color: #d3c3c3;
 }
+
+.likeButton {
+  background-color:rgba(28, 186, 194, 0.74);
+}
+
+.postOperations a p,
+.likeButton{
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  border: transparent;
+}
+
 
 .postCommentsContainer {
   margin-bottom: 2rem;
@@ -142,6 +156,7 @@
 .formSection{
   padding: 1rem 0.5rem 1rem 0.5rem;
 }
+
 .formSection form{
   display: flex;
   flex-direction: column;
@@ -172,4 +187,22 @@ header nav {
 
 header nav img {
   height: 50%;
+}
+
+.postOperations {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+.likeButton img {
+cursor: pointer;
+width: 16px;
+height: 16px;
+transform: scale(1.3);
+transition: all 0.6s 0.4s ease-in-out;
+}
+
+.likeButton img:hover{
+transform: scale(1.8);
 }

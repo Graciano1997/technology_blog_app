@@ -1,7 +1,8 @@
 <div class="postItemContainer">
-<a href=<%="/users/#{post.author_id}/posts/#{index+1}"%>>
- <p id="postsIndex">Post #<%=index+1%></p>
-</a>
+<div class="postOperations">
+<a href=<%="/users/#{post.author_id}/posts/#{index+1}"%>><p id="postsIndex">Post #<%=index+1%></p></a>
+  <%= render partial:"likes/like",locals: {post_item:post}%>
+</div>
  <p><%= post.text%></p>
  <p id="postStatistic">Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0%></p>
 </div>
