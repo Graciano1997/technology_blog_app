@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1><b>Technology Blog App : Views</b></h1>
+<h1><b>Technology Blog App : Add forms</b></h1>
 
 </div>
 
@@ -31,7 +31,7 @@
 # 📖 Technology Blog App <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
-A Ruby on Rails application, but in this milestone we focused on build views using the embeded ruby for html, partials...
+A Ruby on Rails application, but in this milestone we focused on add forms and give the action like functionality to each post in the blog using the embeded ruby for html, partials...
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
