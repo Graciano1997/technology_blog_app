@@ -1,0 +1,7 @@
+<div class="postItemContainer">
+<a href=<%="/users/#{post.author_id}/posts/#{index+1}"%>>
+ <p id="postsIndex">Post #<%=index+1%></p>
+</a>
+ <p><%= post.text%></p>
+ <p id="postStatistic">Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0%></p>
+</div>

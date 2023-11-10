@@ -1,1 +1,16 @@
-<h1> Your User Id: <%= @id %></h1>
+<%= render partial: "users/user", locals: {user: @user}%>
+<div class="userInformation">
+<div class="userBio borderRadio">
+<h4>Bio</h4>
+<p id="bio"><%=@user.bio%></p>
+</div>
+
+<%@user.user_recent_posts.each_with_index do |post,index|%>
+<%= render partial: "posts/post", locals: {user: @user,post: post, index: index}%>
+<%end%>
+
+</div>
+
+<div class="seeAll">
+<a href=<%="/users/#{@user.id}/posts"%>><button type="button"> See all posts</button></a>
+</div>

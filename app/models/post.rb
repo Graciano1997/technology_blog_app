@@ -7,8 +7,8 @@ class Post < ApplicationRecord
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   after_save :update_post_counter
 
-  def show_post_comments(post)
-    Comment.where(post_id: post.id).last(5)
+  def show_post_comments(post, all_comments: false)
+    all_comments ? Comment.where(post_id: post.id).all : Comment.where(post_id: post.id).last(5)
   end
 
   private

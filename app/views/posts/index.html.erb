@@ -1,1 +1,15 @@
-<h1> Your User's <%= @id %> Posts </h1>
+<%= render partial: "users/user", locals:{user:@user}%>
+
+<%@user_posts.each_with_index do |post,index|%>
+<div class="postCommentsContainer">
+<%= render partial: "posts/post", locals: {post:post, index:index}%>
+<div class="comments">
+<% post.show_post_comments(post).each do |comment|%>
+<%= render partial: "comments/comment", locals: {comment:comment, user:@user.find_user(comment.user_id)}%>
+<%end%>
+</div>
+</div>
+<%end%>
+<div class="pagination">
+<a href="/"><button type="button">Pagination</button></a>
+</div>
