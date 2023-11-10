@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-body {
+.container {
   display: flex;
   flex-direction: column;
   margin: 2rem;
@@ -82,7 +82,8 @@ body {
 }
 
 .seeAll button,
-.pagination button {
+.pagination button,
+.formSection form input[type="submit"] {
   border: transparent;
   padding: 1rem;
   border-radius: 8px;
@@ -131,4 +132,44 @@ body {
   margin-bottom: 0.3rem;
   display: flex;
   flex-direction: column;
+}
+.postContainerItem {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.formSection{
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+.formSection form{
+  display: flex;
+  flex-direction: column;
+}
+
+.formSection form input,
+.formSection form textarea {
+  margin: 1rem 0 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+header {
+  position: fixed;
+  height: 3rem;
+  top: 0;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  padding: 5px 3rem 5px 0;
+}
+
+header nav img {
+  height: 50%;
 }
