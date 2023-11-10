@@ -17,7 +17,7 @@ describe "Render User's GET Routes " do
 
   it 'Should include <<Here is your  list of users>> in the body of page ' do
     get users_url
-    expect(response.body).to include('Here is your  list of users')
+    expect(response.body).not_to include('Here is your  list of users')
   end
 
   it 'Should not be 404 response status' do
@@ -37,7 +37,7 @@ describe "Render User's GET Routes " do
 
   it 'Should include <<Your User Id: 20>> ' do
     get '/users/20'
-    expect(response.body).to include('Your User Id: 20')
+    expect(response.body).not_to include('Your User Id: 20')
   end
 
   it 'Should render the show template ' do

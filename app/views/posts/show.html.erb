@@ -1,4 +1,4 @@
-<div class="postContainer borderRadio">
+<div class="postContainerItem borderRadio">
 <%= render partial: "posts/post_head", locals:{user:@user,post:@post_item,id:@id}%>
 <div class="postDescription">
 <%= @post_item.text%>
@@ -8,4 +8,5 @@
 <% @post_item.show_post_comments(@post_item,all_comments:true).each do |comment|%>
 <%= render partial: "comments/comment", locals: {comment:comment, user:@user.find_user(comment.user_id)}%>
 <%end%>
+ <%= render partial:"comments/form",locals: {user: @user, post: @post_item, comment: @comment, id:@id}%>
 </div>

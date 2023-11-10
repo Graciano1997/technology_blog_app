@@ -8,7 +8,6 @@
 <%@user.user_recent_posts.each_with_index do |post,index|%>
 <%= render partial: "posts/post", locals: {user: @user,post: post, index: index}%>
 <%end%>
-
 </div>
 
 <div class="seeAll">

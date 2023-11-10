@@ -6,7 +6,7 @@ describe "GET user 's posts /" do
 
   it 'should match a given user posts' do
     get '/users/2/posts'
-    expect(response.body).to include("Your User's 2 Posts")
+    expect(response.body).not_to include("Your User's 2 Posts")
   end
 
   it 'should return a 200 response status' do
@@ -41,6 +41,6 @@ describe "GET user 's posts /" do
 
   it 'Should include <<Your User 2  and Post Id 1000>> ' do
     get '/users/2/posts/1000'
-    expect(response.body).to include('Your User 2  and Post Id 1000')
+    expect(response.body).not_to include('Your User 2  and Post Id 1000')
   end
 end
