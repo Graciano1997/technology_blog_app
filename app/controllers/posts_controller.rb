@@ -8,7 +8,6 @@ class PostsController < ApplicationController
     @id = params[:id]
     @user = User.find(params[:user_id])
     @post_item = Post.where(author: @user, id:params[:id]).first
-    puts @post_item
     @comment = @user.posts[params[:post_id].to_i - 1].comments.new
   end
 
