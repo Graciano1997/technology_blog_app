@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1><b>Technology Blog App : Add forms</b></h1>
+<h1><b>Technology Blog App : Best Practices</b></h1>
 
 </div>
 
