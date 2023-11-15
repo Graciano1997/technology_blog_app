@@ -94,3 +94,8 @@ RSpec.configure do |config|
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
 end
+
+# Capybara.configure do |config|
+#   config.app_host = "http://localhost:3000" # Adjust the port as needed
+#   config.default_driver = :selenium
+# end

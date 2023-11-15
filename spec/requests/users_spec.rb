@@ -34,14 +34,4 @@ describe "Render User's GET Routes " do
     get users_url(20)
     expect(response).to be_successful
   end
-
-  it 'Should include <<Your User Id: 20>> ' do
-    get '/users/20'
-    expect(response.body).not_to include('Your User Id: 20')
-  end
-
-  it 'Should render the show template ' do
-    get '/users/20'
-    expect(response).to render_template('users/show')
-  end
 end

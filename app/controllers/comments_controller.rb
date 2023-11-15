@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def new
     @user = current_user
-    @post = Post.all[params[:post_id].to_i - 1]
+    # @post = Post.all[params[:post_id].to_i - 1]
     @comment = @user.posts[params[:post_id].to_i - 1].comments.new
   end
 

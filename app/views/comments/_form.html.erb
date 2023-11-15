@@ -2,6 +2,7 @@
   <%= form_with(model: [user, post,comment]) do |form| %>
     <%= form.text_area :text, size: "60x20", placeholder: "Write here your comment..." %>
     <%= form.hidden_field :url_id, value:id %>
+    <%= form.hidden_field :post_item, value:post %>
     <%= form.submit "Comment" %>
   <% end %>
   <div>
