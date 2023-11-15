@@ -1,4 +1,5 @@
 <div class="postContainerItem borderRadio">
+<h3 id="titleItem">Title: <%= @post_item.title%></h3>
 <%= render partial: "posts/post_head", locals:{user:@user,post:@post_item,id:@id}%>
 <div class="postDescription">
 <%= @post_item.text%>
