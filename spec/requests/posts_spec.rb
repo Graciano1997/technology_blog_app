@@ -1,9 +1,9 @@
 describe "GET user 's posts /" do
-  before :each do 
-    @user_gra = User.create(name: 'GracianoHenrique', photo: 'https://graciano.jpg', bio: 'Web Developer',posts_counter: 0)
+  before :each do
+    @user_gra = User.create(name: 'GracianoHenrique', photo: 'https://graciano.jpg', bio: 'Web Developer', posts_counter: 0)
     @user_sha = User.create(name: 'Sha', photo: 'https://sha.jpg', bio: 'Web Developer', posts_counter: 0)
     @post1 = Post.create(author: @user_gra, title: 'Microverse Backend', text: 'the full stack remote web program',
-    comments_counter: 0, likes_counter: 0)
+                         comments_counter: 0, likes_counter: 0)
   end
 
   it 'should return a successfull response' do
