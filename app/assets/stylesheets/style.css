@@ -226,3 +226,33 @@ gap: 0.5rem;
   padding-bottom: 1rem;
   font-size: 24px;
 }
+
+.loginSection {
+  margin-top: 4rem;
+}
+
+.sharedLink {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sharedLink a {
+  font-weight: 700;
+  font-style: oblique;
+  color: black;
+  text-decoration: underline;
+}
+
+.rememberField{
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.rememberField label,
+.rememberField checkbox
+ {
+  cursor: pointer;
+}
