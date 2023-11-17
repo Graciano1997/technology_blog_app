@@ -31,6 +31,7 @@
 # 📖 Technology Blog App <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
+
 A Ruby on Rails application, but in this milestone we focused on add devise gem to handle the all authentication process...
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -55,6 +56,8 @@ A Ruby on Rails application, but in this milestone we focused on add devise gem 
 - **Create Ruby on Rails App**
 - **Add Linter ROR**
 - **Create data model**
+- **Add Request Test**
+- **Add Integration Test**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
