@@ -31,10 +31,11 @@ class PostsController < ApplicationController
 
   def destroy
     @post=Post.find(params[:post_item_id].to_i)
+    @author=User.find(@post.author_id.to_i)
+    @author.decrement!(:posts_counter)
     Like.where(post: @post).destroy_all
     Comment.where(post: @post).destroy_all
     @post.destroy
-    puts "Destruido"
     redirect_to "/users/#{session[:user]["id"]}/", notice: 'Post was successfully destroyed.'
   end
 end
