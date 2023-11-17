@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def new
-    @user = User.where(email: session[:email]).first
+    @user = User.where(email: session[:user_email]).first
     @comment = @user.posts[params[:post_id].to_i - 1].comments.new
   end
 
