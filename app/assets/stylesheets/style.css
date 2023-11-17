@@ -13,6 +13,10 @@ header nav img {
   height: 50%;
 }
 
+nav a {
+padding: 0 8px 0 8px;
+}
+
 .userItemContainer {
   display: grid;
   grid-template-columns: 15fr 85fr;
@@ -255,4 +259,13 @@ gap: 0.5rem;
 .rememberField checkbox
  {
   cursor: pointer;
+}
+
+.login button{
+  border: transparent;
+  padding: 0.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgb(7, 0, 0);
+  color: #d3c3c3; 
 }
