@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1><b>Technology Blog App : integration specs for views and fix n+1 problems</b></h1>
+<h1><b>Technology Blog App : Devise</b></h1>
 
 </div>
 
@@ -31,7 +31,8 @@
 # 📖 Technology Blog App <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
-A Ruby on Rails application, but in this milestone we focused on add integration specs using capybara for views and fix n+1 problems...
+
+A Ruby on Rails application, but in this milestone we focused on add devise gem to handle the all authentication process...
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
@@ -139,7 +140,7 @@ If you like this project you can share this project to your friend
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
+<!-- ACKNOWLEDGEMENT -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
