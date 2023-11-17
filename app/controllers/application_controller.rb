@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
      devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :name, :password,:posts_counter)}
      devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:email, :name, :password, :current_password)}
    end
+
+   def after_sign_in_path_for(resource)
+    session[:user_email] = resource.email
+    root_path
+  end
 end
