@@ -9,9 +9,10 @@ class Users::Confirmations::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+   def create
+    puts "CHEGUEIIII #{params[:user]}"
+    super
+   end
 
   # DELETE /resource/sign_out
   # def destroy
