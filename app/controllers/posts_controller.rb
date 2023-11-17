@@ -7,8 +7,10 @@ class PostsController < ApplicationController
   def show
     @id = params[:id]
     @user = User.where(email: session[:user]["email"]).first
-    @post_item = Post.includes(:author).where(author: @user, posts: { id: params[:id] }).first
-    @comment = @user.posts[params[:post_id].to_i - 1].comments.new
+    # @post_item = Post.includes(:author).where(author: @user, posts: { id: params[:id] }).first
+    @post_item = Post.find(params[:id])
+    # @comment = @user.posts[params[:post_id].to_i - 1].comments.new
+    @comment = @post_item.comments.new
   end
 
   def new
@@ -25,5 +27,14 @@ class PostsController < ApplicationController
     else
       redirect_to "/users/#{@user.id}/posts/new", flash: { success: 'Post was successfully created.' }
     end
+  end
+
+  def destroy
+    @post=Post.find(params[:post_item_id].to_i)
+    Like.where(post: @post).destroy_all
+    Comment.where(post: @post).destroy_all
+    @post.destroy
+    puts "Destruido"
+    redirect_to "/users/#{session[:user]["id"]}/", notice: 'Post was successfully destroyed.'
   end
 end

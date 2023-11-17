@@ -114,7 +114,8 @@ nav a {
 .pagination button,
 .formSection form input[type="submit"],
 .postOperations a p,
-.likeButton {
+.likeButton,
+.deleteButton {
   border: transparent;
   padding: 1rem;
   border-radius: 8px;
@@ -124,7 +125,7 @@ nav a {
 }
 
 .likeButton {
-  background-color: rgba(28, 186, 194, 0.74);
+  background-color: transparent;
   transition: all 0.6s 0.4s ease-in-out;
 }
 
@@ -229,7 +230,10 @@ header nav {
 }
 
 .likeButton:hover {
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.377);
+}
+.deleteButton:hover {
+  background-color: transparent;
 }
 
 #titleItem {
