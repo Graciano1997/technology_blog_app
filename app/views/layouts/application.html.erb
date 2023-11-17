@@ -12,9 +12,11 @@
   </head>
 
   <body>
-  <%= render partial:"layouts/header"%>
-  <div class="container">
+  <%= render partial:"layouts/header" if session.key?(:user_email)==true %>
+   <div class="container">
     <%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   </div>
   </body>
 </html>

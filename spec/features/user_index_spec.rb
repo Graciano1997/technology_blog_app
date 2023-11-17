@@ -51,7 +51,6 @@ RSpec.describe 'Index', type: :feature do
     end
   end
 
-
   it 'Should render the user image item' do
     picture_elements = 0
     all('.userItemContainer').each do |user|

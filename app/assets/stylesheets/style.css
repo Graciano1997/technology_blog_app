@@ -13,6 +13,10 @@ header nav img {
   height: 50%;
 }
 
+nav a {
+  padding: 0 8px 0 8px;
+}
+
 .userItemContainer {
   display: grid;
   grid-template-columns: 15fr 85fr;
@@ -28,6 +32,13 @@ header nav img {
 
 .userInformation {
   padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.sharedLink a {
+  font-weight: 700;
+  font-style: oblique;
+  color: black;
+  text-decoration: underline;
 }
 
 .userBio {
@@ -57,8 +68,16 @@ header nav img {
   transition: all 1s 0.5s;
 }
 
+.likeButton img {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  transform: scale(1.3);
+  transition: all 0.6s 0.4s ease-in-out;
+}
+
 .userPhotograph img:hover {
-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .userDetails {
@@ -197,21 +216,12 @@ header nav {
 
 .postOperations {
   display: flex;
-
-justify-content: space-between;
+  justify-content: space-between;
 }
 
-.op{
-display: flex;
-gap: 0.5rem;
-}
-
-.likeButton img {
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  transform: scale(1.3);
-  transition: all 0.6s 0.4s ease-in-out;
+.op {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .likeButton img:hover {
@@ -225,4 +235,34 @@ gap: 0.5rem;
 #titleItem {
   padding-bottom: 1rem;
   font-size: 24px;
+}
+
+.loginSection {
+  margin-top: 4rem;
+}
+
+.sharedLink {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rememberField {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.rememberField label {
+  cursor: pointer;
+}
+
+.login button {
+  border: transparent;
+  padding: 0.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgb(7, 0, 0);
+  color: #d3c3c3;
 }
