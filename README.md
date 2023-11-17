@@ -137,7 +137,7 @@ If you like this project you can share this project to your friend
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
+<!-- ACKNOWLEDGEMENT -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
