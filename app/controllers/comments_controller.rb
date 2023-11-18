@@ -4,9 +4,7 @@ class CommentsController < ApplicationController
   def index
     @post=Post.find(params[:post_id].to_i)
      @posts_comments=@post.comments
-
     respond_to do |format|
-      # format.html # index.html.erb
       format.json { render :json => @posts_comments }
     end
   end
