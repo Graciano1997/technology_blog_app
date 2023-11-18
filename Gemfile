@@ -67,8 +67,6 @@ group :test do
 end
 
 
-gem 'bcrypt', '~> 3.1.7'
 gem 'cancancan', '~> 3.5'
 gem 'devise'
-gem 'jwt'
 gem 'rubocop', '>= 1.0', '< 2.0'

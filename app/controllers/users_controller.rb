@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  skip_before_action :authenticate_request, only: [:create]
-  before_action :set_user, only: %i[show destroy] # corrected 'brefore_action' to 'before_action'
-
+  # skip_before_action :authenticate_request, only: [:create]
   def index
     @users = User.all
   end
@@ -14,11 +12,5 @@ class UsersController < ApplicationController
   def logout
     reset_session
     redirect_to new_user_session_path, notice: 'Logged out successfully.'
-  end
-
-  private
-
-  def set_user
-    @user = User.find(params[:id])
   end
 end
