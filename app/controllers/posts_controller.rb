@@ -3,10 +3,6 @@ class PostsController < ApplicationController
   def index
     @user = User.where(email: session[:user]['email']).first
     @user_posts = Post.includes(:author).where(author_id: @user.id)
-    respond_to do |format|
-      format.html
-      format.json { render json: @posts_comments }
-    end
   end
 
   def show
