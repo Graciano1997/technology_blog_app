@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .container {
@@ -148,7 +151,24 @@ nav a {
 .commentItemContainer {
   display: flex;
   gap: 8px;
-  padding: 5px 0 5px 0;
+  padding: 5px 5px 5px 5px;
+  background-color: rgba(110, 16, 16, 0.205);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 8px 0 8px 0;
+}
+.authorCommentItemContainer {
+  display: flex;
+  gap: 8px;
+  padding: 5px 5px 5px 5px;
+  background-color: rgba(128, 162, 212, 0.315);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 8px 0 8px 0;
+}
+
+.authorCommentItemContainer button {
+  align-items: end;
 }
 
 #commentor,
@@ -269,4 +289,10 @@ header nav {
   cursor: pointer;
   background-color: rgb(7, 0, 0);
   color: #d3c3c3;
+}
+
+.trashContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.1rem;
 }
