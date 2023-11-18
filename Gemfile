@@ -66,11 +66,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-<<<<<<< HEAD
-
-=======
 gem 'bcrypt', '~> 3.1.7'
->>>>>>> 708d2c6e0ee6b0fffe6484a24cd14a30fdd58cd7
 gem 'cancancan', '~> 3.5'
 gem 'devise'
 gem 'rubocop', '>= 1.0', '< 2.0'
