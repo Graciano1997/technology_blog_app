@@ -156,6 +156,7 @@ nav a {
   border-bottom-left-radius: 10px;
   margin: 8px 0 8px 0;
 }
+
 .authorCommentItemContainer {
   display: flex;
   gap: 8px;
@@ -248,9 +249,8 @@ header nav {
   transform: scale(1.5);
 }
 
-.likeButton:hover {
-  background-color: rgba(255, 255, 0, 0.377);
-}
+.likeButton:hover { background-color: rgba(255, 255, 0, 0.377); }
+
 .deleteButton:hover {
   background-color: transparent;
 }

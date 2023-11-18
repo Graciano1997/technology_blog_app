@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   def index
-    @user = User.where(email: session[:user]["email"]).first
+    @user = User.where(email: session[:user]['email']).first
     @user_posts = Post.includes(:author).where(author_id: @user.id)
   end
 
   def show
     @id = params[:id]
-    @user = User.where(email: session[:user]["email"]).first
+    @user = User.where(email: session[:user]['email']).first
     # @post_item = Post.includes(:author).where(author: @user, posts: { id: params[:id] }).first
     @post_item = Post.find(params[:id])
     # @comment = @user.posts[params[:post_id].to_i - 1].comments.new
@@ -14,12 +14,12 @@ class PostsController < ApplicationController
   end
 
   def new
-    @user = User.where(email: session[:user]["email"]).first
+    @user = User.where(email: session[:user]['email']).first
     @post = @user.posts.new
   end
 
   def create
-    @user = User.where(email: session[:user]["email"]).first
+    @user = User.where(email: session[:user]['email']).first
     @post = Post.create(author: @user, title: params[:post][:title], text: params[:post][:text],
                         comments_counter: 0, likes_counter: 0)
     if @post.new_record?
@@ -30,12 +30,12 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post=Post.find(params[:post_item_id].to_i)
-    @author=User.find(@post.author_id.to_i)
+    @post = Post.find(params[:post_item_id].to_i)
+    @author = User.find(@post.author_id.to_i)
     @author.decrement!(:posts_counter)
     Like.where(post: @post).destroy_all
     Comment.where(post: @post).destroy_all
     @post.destroy
-    redirect_to "/users/#{session[:user]["id"]}/", notice: 'Post was successfully destroyed.'
+    redirect_to "/users/#{session[:user]['id']}/", notice: 'Post was successfully destroyed.'
   end
 end
