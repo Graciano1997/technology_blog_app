@@ -5,7 +5,6 @@ class PostsController < ApplicationController
     @user_posts = Post.includes(:author).where(author_id: @user.id)
     respond_to do |format|
       format.html
-      # format.json { render :json=>@user_posts}
       format.json { render json: @posts_comments }
     end
   end
