@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   protect_from_forgery with: :exception
   before_action :update_allowed_parameters, if: :devise_controller?
+  include JsonWebToken
+  before_action :authenticate_request
 
   protected
 
@@ -11,8 +13,17 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    @user = User.where(email: resource.email).first
+    @user = User.find_by(email: resource.email)
     session[:user] = @user
     root_path
+  end
+
+  private
+
+  def authenticate_request
+    header = request.headers['Authorization']
+    header = header.split.last if header
+    decoded = JsonWebToken.decode(header)
+    @current_user = User.find(decoded[:user_id])
   end
 end

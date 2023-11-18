@@ -1,11 +1,12 @@
 class CommentsController < ApplicationController
+  before_action :set_post
+  skip_before_action :verify_authenticity_token, only: [:create]
   load_and_authorize_resource
-
   def index
-    @post=Post.find(params[:post_id].to_i)
-     @posts_comments=@post.comments
+    @post = Post.find(params[:post_id].to_i)
+    @posts_comments = @post.comments
     respond_to do |format|
-      format.json { render :json => @posts_comments }
+      format.json { render json: @posts_comments }
     end
   end
 
@@ -15,15 +16,38 @@ class CommentsController < ApplicationController
   end
 
   def create
-    authorize! :create, @comment
-    @user = User.where(email: session[:user]['email']).first
-    @comment = Comment.create(text: params[:comment][:text], user: @user, post_id: params[:post_id])
-    if @comment.new_record?
-      redirect_to "/users/#{params[:user_id]}/posts/#{params[:comment][:url_id]}",
-                  flash: { wrong: 'Upps! Comment was not created.' }
+    @user = User.find_by_email(params[:email])
+
+    if @user&.authenticate(params[:password])
+      token = jwt_encode(user_id: @user.id)
+      comment_params = params.require(:comment).permit(:text)
+      @comment = Comment.new(comment_params.merge(user: @user, post_id: params[:post_id]))
+
+      respond_to do |format|
+        if @comment.save
+          format.html do
+            redirect_to "/users/#{params[:user_id]}/posts/#{params[:comment][:url_id]}",
+                        flash: { success: 'Comment was successfully created.' }
+          end
+          format.json { render json: { token:, comment: @comment }, status: :ok }
+        else
+          format.html do
+            redirect_to "/users/#{params[:user_id]}/posts/#{params[:comment][:url_id]}",
+                        flash: { wrong: 'Upps! Comment was not created.' }
+          end
+          format.json do
+            render json: { error: 'Failed to create comment', errors: @comment.errors.full_messages },
+                   status: :unprocessable_entity
+          end
+        end
+      end
     else
-      redirect_to "/users/#{params[:user_id]}/posts/#{params[:comment][:url_id]}",
-                  flash: { success: 'Comment was successfully created.' }
+      respond_to do |format|
+        format.html do
+          redirect_to new_user_session_path, flash: { error: 'Unauthorized' }
+        end
+        format.json { render json: { error: 'Unauthorized' }, status: :unauthorized }
+      end
     end
   end
 
