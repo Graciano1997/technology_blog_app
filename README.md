@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1><b>Technology Blog App : Devise</b></h1>
+<h1><b>Technology Blog App : Authorization</b></h1>
 
 </div>
 
@@ -32,7 +32,7 @@
 
 <b>This is Technology-Blog-App.</b>
 
-A Ruby on Rails application, but in this milestone we focused on add devise gem to handle the all authentication process...
+A Ruby on Rails application, but in this milestone we focused on adding cancancan gem to handle authorization in the App...
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
