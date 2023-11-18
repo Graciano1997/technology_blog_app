@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1><b>Technology Blog App : Authorization</b></h1>
+<h1><b>Technology Blog App : API</b></h1>
 
 </div>
 
@@ -32,7 +32,7 @@
 
 <b>This is Technology-Blog-App.</b>
 
-A Ruby on Rails application, but in this milestone we focused on adding cancancan gem to handle authorization in the App...
+A Ruby on Rails application, but in this milestone we focused on adding API points...
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
@@ -148,7 +148,7 @@ If you like this project you can share this project to your friend
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse and all the contributors for this project
+I would like to thank Microverse and all the contributors for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
