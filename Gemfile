@@ -64,8 +64,8 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
-  # gem 'webdrivers'
 end
 
+gem 'cancancan', '~> 3.5'
 gem 'devise'
 gem 'rubocop', '>= 1.0', '< 2.0'
