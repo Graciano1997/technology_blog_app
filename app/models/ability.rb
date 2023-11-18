@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
     can :destroy, Post, author: user
-    can :destroy, Comment, user: user
+    can(:destroy, Comment, user:)
     can :read, Post
     can :read, Comment
 
