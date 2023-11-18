@@ -1,10 +1,17 @@
 class Ability
   include CanCan::Ability
+
   def initialize(user)
     can :destroy, Post, author: user
-    can(:destroy, Comment, user:)
-    return unless user.role.to_s.eql?('admin')
+    can :destroy, Comment, user: user
+    can :read, Post
+    can :read, Comment
 
-    can :destroy, [Post, Comment]
+    if user.persisted?
+      can :create, Post
+      can :create, Comment
+    end
+
+    can :destroy, [Post, Comment] if user.role.to_s.eql?('admin')
   end
 end

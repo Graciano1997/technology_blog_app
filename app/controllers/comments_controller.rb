@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    authorize! :create, @comment
     @user = User.where(email: session[:user]['email']).first
     @comment = Comment.create(text: params[:comment][:text], user: @user, post_id: params[:post_id])
     if @comment.new_record?
@@ -25,5 +26,11 @@ class CommentsController < ApplicationController
     @comment.destroy
     @post.decrement!(:comments_counter)
     redirect_to "/users/#{session[:user]['id']}/posts/@post.id", notice: 'Comment was successfully destroyed.'
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:text, :user, :post_id)
   end
 end
