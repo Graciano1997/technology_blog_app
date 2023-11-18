@@ -40,8 +40,7 @@ nav a {
 .sharedLink a {
   font-weight: 700;
   font-style: oblique;
-  color: black;
-  text-decoration: underline;
+  color: rgba(97, 26, 26, 0.849);
 }
 
 .userBio {
@@ -289,6 +288,16 @@ header nav {
   cursor: pointer;
   background-color: rgb(7, 0, 0);
   color: #d3c3c3;
+}
+
+.logout button {
+  border: transparent;
+  padding: 0.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgba(196, 14, 14, 0.568);
+  color: #fff;
+  font-weight: bold;
 }
 
 .trashContainer {
