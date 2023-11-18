@@ -28,7 +28,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Technology Blog App <a name="technology-blog-app"></a>
+# 📖 Technology Blog App Authorization <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
 
