@@ -64,4 +64,12 @@ RSpec.describe 'Index', type: :feature do
     end
   end
 
+  context 'Clicking moments' do
+    it "Should redirect to a specfic post's show page when a user's post is clicked" do
+      post_id = @user_gra.posts[0].id
+      post_link_element = find("a[href='/users/#{@user_gra.id}/posts/#{post_id}']")
+      post_link_element.click
+      expect(current_path).to eq("/users/#{@user_gra.id}/posts/#{post_id}")
+    end
+  end
 end
