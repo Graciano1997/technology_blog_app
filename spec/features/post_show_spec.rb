@@ -53,5 +53,9 @@ RSpec.describe 'Index', type: :feature do
     it 'Should render the title of post' do
       expect(page).to have_content("Title: #{@post2.title}")
     end
+
+    it 'Should render the first comments of a post' do
+      expect(page).to have_content(@post2.comments[0].text)
+    end
   end
 end
