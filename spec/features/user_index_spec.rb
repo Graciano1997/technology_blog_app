@@ -50,4 +50,13 @@ RSpec.describe 'Index', type: :feature do
       expect(current_path).to eq(user_path(@user_sha.id).concat('/'))
     end
   end
+
+  it 'Should render the user image item' do
+    picture_elements = 0
+    all('.userItemContainer').each do |user|
+      expect(user).to have_css('.userPhotograph')
+      picture_elements += 1
+    end
+    expect(picture_elements).to be(2)
+  end
 end
