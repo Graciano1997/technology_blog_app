@@ -26,4 +26,42 @@ RSpec.describe 'Index', type: :feature do
       expect(page).to have_content(@user_gra.name)
     end
 
+    it 'Should render the user image item' do
+      picture_elements = 0
+      all('.userItemContainer').each do |user|
+        expect(user).to have_css('.userPhotograph')
+        picture_elements += 1
+      end
+      expect(picture_elements).to be(1)
+    end
+
+    it 'Should have one post' do
+      expect(page).to have_content("Number of posts #{@user_gra.posts_counter.to_i}")
+    end
+
+    it 'Should render the title of post' do
+      expect(page).to have_content("Title: #{@post2.title}")
+    end
+
+    it 'Should render the body of post' do
+      expect(page).to have_content(@post2.text)
+    end
+
+    it 'Should render the first comments of a post' do
+      expect(page).to have_content(@post2.comments[0].text)
+    end
+
+    it 'Should render the comments number for a post' do
+      expect(page).to have_content("Comments: #{@post2.comments_counter.to_i}")
+    end
+
+    it 'Should render the Likes number for a post' do
+      expect(page).to have_content(" Likes: #{@post2.likes_counter.to_i}")
+    end
+
+    it 'Should render the Pagination button' do
+      expect(page).to have_button('Pagination')
+    end
+  end
+
 end
