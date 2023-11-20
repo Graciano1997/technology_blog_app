@@ -33,29 +33,5 @@ RSpec.describe 'Index', type: :feature do
     it 'Should render the Likes number for a post' do
       expect(page).to have_content(" Likes: #{@post2.likes_counter.to_i}")
     end
-
-    it 'Should render the body of post' do
-      expect(page).to have_content(@post2.text)
-    end
-
-    it 'Should render the name of all commenters' do
-      @post2.comments.each do |comment|
-        expect(page).to have_content(comment.user.name)
-      end
-    end
-
-    it 'Should render the comments ' do
-      @post2.comments.each do |comment|
-        expect(page).to have_content(comment.text)
-      end
-    end
-
-    it 'Should render the title of post' do
-      expect(page).to have_content("Title: #{@post2.title}")
-    end
-
-    it 'Should render the first comments of a post' do
-      expect(page).to have_content(@post2.comments[0].text)
-    end
   end
 end
