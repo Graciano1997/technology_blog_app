@@ -35,5 +35,19 @@ RSpec.describe 'Index', type: :feature do
     end
   end
 
+  context 'User Sha context' do
+    it 'Should show Sha user' do
+      expect(page).to have_content(@user_sha.name)
+    end
 
+    it 'Should have one post' do
+      expect(page).to have_content("Number of posts #{@user_sha.posts_counter.to_i}")
+    end
+
+    it 'Should redirected to a user When is clicked on a user name' do
+      user_link_element = find('a', text: @user_sha.name)
+      user_link_element.click
+      expect(current_path).to eq(user_path(@user_sha.id).concat('/'))
+    end
+  end
 end
