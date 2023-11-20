@@ -1,0 +1,9 @@
+<div class="trashContainer">
+<%= form_with(url: "/delete/comment/#{comment.id}", method: :delete) do |form| %>
+  <%= form.hidden_field :comment_item, value: comment.id %>
+  <%= button_tag type: 'submit', class:'likeButton' do %>
+    <%= image_tag "trash.svg", alt: 'Like', class: 'like-icon' %>
+  <% end %>
+<% end %>
+</div>
+

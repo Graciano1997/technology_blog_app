@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1><b>Technology Blog App : integration specs for views and fix n+1 problems</b></h1>
+<h1><b>Technology Blog App : API</b></h1>
 
 </div>
 
@@ -28,10 +28,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Technology Blog App <a name="technology-blog-app"></a>
+# 📖 Technology Blog App Authorization <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
-A Ruby on Rails application, but in this milestone we focused on add integration specs using capybara for views and fix n+1 problems...
+
+A Ruby on Rails application, but in this milestone we focused on adding API points...
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
@@ -114,7 +115,6 @@ it will install the required gemfile for running the project
 
 - GitHub: [@Pushkar](https://github.com/pushkar1995)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -143,11 +143,11 @@ If you like this project you can share this project to your friend
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
+<!-- ACKNOWLEDGEMENT -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse and all the contributors for this project
+I would like to thank Microverse and all the contributors for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
