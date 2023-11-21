@@ -1,18 +1,8 @@
-<% if(comment.user_id==session[:user]["id"])%>  
-<div class="authorCommentItemContainer">
-<%else%>
 <div class="commentItemContainer">
-<%end%>
 <%if(comment.text.size>0) %>
  <p id="commentor"><%=user.name%>:</p>
 <p><%= comment.text%></p></>
 <%else%>
  <p id="commentor"><%="None!"%>:</p>
-<%end%>
-
-</div>
-<div class="trashContainer">
-<% if(comment.user_id==session[:user]["id"] || session[:user]["role"].to_s.eql?("admin"))%>
- <%= render partial:"comments/delete", locals: {comment:comment}%>
 <%end%>
 </div>
