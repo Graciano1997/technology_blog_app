@@ -111,10 +111,9 @@ it will install the required gemfile for running the project
 
 - GitHub: [@Graciano](https://github.com/Graciano1997)
 
-👤 **Shah Zaman**
+👤 **Pushkar Gautam**
 
-- GitHub: [@shah Zaman](https://github.com/sheezu900)
-
+- GitHub: [@Pushkar](https://github.com/pushkar1995)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
