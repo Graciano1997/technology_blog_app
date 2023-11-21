@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1><b>Technology Blog App : Devise</b></h1>
+<h1><b>Technology Blog App : Authorization</b></h1>
 
 </div>
 
@@ -28,11 +28,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Technology Blog App <a name="technology-blog-app"></a>
+# 📖 Technology Blog App Authorization <a name="technology-blog-app"></a>
 
 <b>This is Technology-Blog-App.</b>
 
-A Ruby on Rails application, but in this milestone we focused on add devise gem to handle the all authentication process...
+A Ruby on Rails application, but in this milestone we focused on adding cancancan gem to handle authorization in the App...
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
@@ -110,10 +110,11 @@ it will install the required gemfile for running the project
 👤 **Graciano**
 
 - GitHub: [@Graciano](https://github.com/Graciano1997)
-- 
+
 - 👤 **Pushkar Gautam**
 
 - GitHub: [@Pushkar](https://github.com/pushkar1995)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
