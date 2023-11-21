@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .container {
@@ -37,8 +40,7 @@ nav a {
 .sharedLink a {
   font-weight: 700;
   font-style: oblique;
-  color: black;
-  text-decoration: underline;
+  color: rgba(97, 26, 26, 0.849);
 }
 
 .userBio {
@@ -114,7 +116,8 @@ nav a {
 .pagination button,
 .formSection form input[type="submit"],
 .postOperations a p,
-.likeButton {
+.likeButton,
+.deleteButton {
   border: transparent;
   padding: 1rem;
   border-radius: 8px;
@@ -124,7 +127,7 @@ nav a {
 }
 
 .likeButton {
-  background-color: rgba(28, 186, 194, 0.74);
+  background-color: transparent;
   transition: all 0.6s 0.4s ease-in-out;
 }
 
@@ -147,7 +150,25 @@ nav a {
 .commentItemContainer {
   display: flex;
   gap: 8px;
-  padding: 5px 0 5px 0;
+  padding: 5px 5px 5px 5px;
+  background-color: rgba(110, 16, 16, 0.205);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 8px 0 8px 0;
+}
+
+.authorCommentItemContainer {
+  display: flex;
+  gap: 8px;
+  padding: 5px 5px 5px 5px;
+  background-color: rgba(128, 162, 212, 0.315);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 8px 0 8px 0;
+}
+
+.authorCommentItemContainer button {
+  align-items: end;
 }
 
 #commentor,
@@ -228,8 +249,10 @@ header nav {
   transform: scale(1.5);
 }
 
-.likeButton:hover {
-  background-color: yellow;
+.likeButton:hover { background-color: rgba(255, 255, 0, 0.377); }
+
+.deleteButton:hover {
+  background-color: transparent;
 }
 
 #titleItem {
@@ -265,4 +288,20 @@ header nav {
   cursor: pointer;
   background-color: rgb(7, 0, 0);
   color: #d3c3c3;
+}
+
+.logout button {
+  border: transparent;
+  padding: 0.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgba(196, 14, 14, 0.568);
+  color: #fff;
+  font-weight: bold;
+}
+
+.trashContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.1rem;
 }
