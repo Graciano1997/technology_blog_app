@@ -12,7 +12,7 @@
   </head>
 
   <body>
-  <%= render partial:"layouts/header" if session.key?(:user_email)==true %>
+  <%= render partial:"layouts/header" if session.key?(:user)==true %>
    <div class="container">
     <%= yield %>
   <p class="notice"><%= notice %></p>
