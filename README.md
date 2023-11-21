@@ -116,7 +116,6 @@ it will install the required gemfile for running the project
 - GitHub: [@Pushkar](https://github.com/pushkar1995)
 
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -149,7 +148,7 @@ If you like this project you can share this project to your friend
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse and all the contributors for this project
+I would like to thank Microverse and all the contributors for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
