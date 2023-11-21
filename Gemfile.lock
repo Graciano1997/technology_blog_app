@@ -84,6 +84,7 @@ GEM
     bootsnap (1.17.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cancancan (3.5.0)
     capybara (3.39.2)
       addressable
       matrix
@@ -152,6 +153,8 @@ GEM
       net-protocol
     nio4r (2.5.9)
     nokogiri (1.15.4-x64-mingw-ucrt)
+      racc (~> 1.4)
+    nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
@@ -296,10 +299,12 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   bootsnap
+  cancancan (~> 3.5)
   capybara
   debug
   devise
