@@ -7,7 +7,6 @@
 <div class="op">
 <a href=<%="/users/#{post.author_id}/posts/#{post.id}"%>><p id="postsIndex">Post #<%=index+1%></p></a>
   <%= render partial:"likes/like",locals: {post_item:post}%>
-  <%= render partial:"posts/delete",locals: {post_item:post} if(session[:user]["id"]==post.author_id || session[:user]["role"].to_s.eql?("admin"))%>
 </div>
 </div>
  <p><%= post.text%></p>
