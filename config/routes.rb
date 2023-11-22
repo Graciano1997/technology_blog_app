@@ -12,12 +12,12 @@ Rails.application.routes.draw do
     end
   end
   get "up", to: "rails/health#show", as: :rails_health_check
-
-   namespace :api, default: {format: :json} do
-     namespace :V1 do
-       resources :posts, only: [:index] do
-         resources :comments, only: [:index, :create]
-       end
-     end
-   end
+  
+  namespace :api, default: {format: :json} do
+    namespace :v1 do
+      resources :posts, only: %i[index] do
+        resources :comments, only: %i[index create]
+      end
+    end
+  end
 end
