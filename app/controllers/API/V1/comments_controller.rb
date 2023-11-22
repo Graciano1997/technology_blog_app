@@ -1,5 +1,6 @@
-class CommentsController < ApplicationController
+class Api::V1::CommentsController < ApplicationController
     skip_before_action :verify_authenticity_token
+    load_and_authorize_resource
   
     def index
       @post = Post.includes(:comments).find(params[:post_id])
@@ -19,9 +20,7 @@ class CommentsController < ApplicationController
     end
   
     private
-  
     def params
       params.require(:comment).permit(:text)
-    end
-  end
-  
+    end 
+end
