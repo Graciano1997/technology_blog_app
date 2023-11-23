@@ -13,7 +13,8 @@ class Users::Confirmations::SessionsController < Devise::SessionsController
       if user.persisted?
         payload = { email: user.email }
         token = TokenService.encode(payload)
-        puts "OLA SENHA #{token}"
+        puts "User #{user.name} token: #{token} "
+        puts "please save the above token!"
       end
     end
   end
