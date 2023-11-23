@@ -14,7 +14,7 @@ class Users::Confirmations::SessionsController < Devise::SessionsController
         payload = { email: user.email }
         token = TokenService.encode(payload)
         puts "User #{user.name} token: #{token} "
-        puts "please save the above token!"
+        puts 'please save the above token!'
       end
     end
   end

@@ -13,7 +13,7 @@ class Api::V1::CommentsController < ApplicationController
 
   def create
     authorize! :create, @comment
-    @current_user=User.where(email: session[:user]['email']).first
+    @current_user = User.where(email: session[:user]['email']).first
     @post = User.find(params[:user_id]).posts.find(params[:post_id])
     @comment = @post.comments.new(text: comment_params[:text], user: @current_user)
 

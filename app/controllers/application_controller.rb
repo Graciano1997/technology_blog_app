@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
 
     token = auth_header.split.last
     decoded = TokenService.decode(token)
-    @user=User.where(email: decoded[:email]).first
+    @user = User.where(email: decoded[:email]).first
     session[:user] = @user
   end
 
