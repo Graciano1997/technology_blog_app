@@ -29,7 +29,7 @@
 
 # 📖 Technology Blog App Authorization <a name="technology-blog-app"></a>
 
-<b>This is Technology-Blog-App.</b>
+<b>This is Technology-Blog-App..</b>
 
 
 A Ruby on Rails application, but in this milestone we focused on adding API points, including jwt "token"...
