@@ -32,7 +32,7 @@
 <b>This is Technology-Blog-App.</b>
 
 
-A Ruby on Rails application, but in this milestone we focused on adding API points...
+A Ruby on Rails application, but in this milestone we focused on adding API points, including jwt "token"...
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
