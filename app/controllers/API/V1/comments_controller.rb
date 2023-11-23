@@ -13,14 +13,14 @@ class Api::V1::CommentsController < ApplicationController
 
   def create
     authorize! :create, @comment
-     @post = User.find(params[:user_id]).posts.find(params[:post_id])
-     @comment = @post.comments.new(text: comment_params[:text], user: current_user)
+    @post = User.find(params[:user_id]).posts.find(params[:post_id])
+    @comment = @post.comments.new(text: comment_params[:text], user: current_user)
 
-     if @comment.save
-       render json: { success: true, data: { comment: @comment, user: current_user } }, status: :created
-     else
-       render json: { success: false, errors: @comment.errors.full_messages }, status: :unprocessable_entity
-     end
+    if @comment.save
+      render json: { success: true, data: { comment: @comment, user: current_user } }, status: :created
+    else
+      render json: { success: false, errors: @comment.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   private

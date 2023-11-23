@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    @user = user || User.new  # If user is nil, use a new instance of User
+    @user = user || User.new # If user is nil, use a new instance of User
 
     can :destroy, Post, author: @user
     can :destroy, Comment, user_id: @user.id
