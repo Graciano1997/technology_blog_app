@@ -18,7 +18,7 @@ class Api::V1::CommentsController < ApplicationController
     @comment = @post.comments.new(text: comment_params[:text], user: @current_user)
 
     if @comment.save
-      render json: { success: true, data: { comment: @comment, user: current_user } }, status: :created
+      render json: { success: true, data: { comment: @comment } }, status: :created
     else
       render json: { success: false, errors: @comment.errors.full_messages }, status: :unprocessable_entity
     end
