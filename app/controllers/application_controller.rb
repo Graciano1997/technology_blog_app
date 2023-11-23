@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
-  protect_from_forgery with: :exception
+  # protect_from_forgery with: :exception
   before_action :update_allowed_parameters, if: :devise_controller?
 
   protected
@@ -11,8 +11,25 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    @user = User.find_by(email: resource.email)
+    User.where(email: resource.email).first
     session[:user] = @user
     root_path
+  end
+
+  private
+
+  def authenticate_request
+    auth_header = request.headers['Authorization']
+    return unless auth_header
+
+    token = auth_header.split.last
+    decoded = TokenService.decode(token)
+    @user = User.where(email: decoded[:email]).first
+    session[:user] = @user
+  end
+
+  def hard_logout
+    reset_session
+    puts 'Request executed successfully.....100%'
   end
 end

@@ -3,7 +3,6 @@
 <div align="center">
 
 <h1><b>Technology Blog App : API</b></h1>
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -30,9 +29,10 @@
 
 # 📖 Technology Blog App Authorization <a name="technology-blog-app"></a>
 
-<b>This is Technology-Blog-App.</b>
+<b>This is Technology-Blog-App..</b>
 
-A Ruby on Rails application, but in this milestone we focused on adding API points...
+
+A Ruby on Rails application, but in this milestone we focused on adding API points, including jwt "token"...
 
 ## 🛠 Built With <a name="built-with"></a>
 <div >
@@ -111,9 +111,9 @@ it will install the required gemfile for running the project
 
 - GitHub: [@Graciano](https://github.com/Graciano1997)
 
-👤 **Shah Zaman**
+- 👤 **Pushkar Gautam**
 
-- GitHub: [@shah Zaman](https://github.com/sheezu900)
+- GitHub: [@Pushkar](https://github.com/pushkar1995)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
