@@ -2,16 +2,18 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :destroy, Post, author: user
-    can(:destroy, Comment, user_id: user.id)
+    @user = user || User.new  # If user is nil, use a new instance of User
+
+    can :destroy, Post, author: @user
+    can :destroy, Comment, user_id: @user.id
     can :read, Post
     can :read, Comment
 
-    if user.persisted?
+    if @user.persisted?
       can :create, Post
       can :create, Comment
     end
 
-    can :destroy, [Post, Comment] if user.role.to_s.eql?('admin')
+    can :destroy, [Post, Comment] if @user.role.to_s.eql?('admin')
   end
 end

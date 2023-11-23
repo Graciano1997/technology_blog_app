@@ -11,8 +11,26 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    @user = User.where(email: resource.email).first
+    user = User.where(email: resource.email).first
     session[:user] = @user
     root_path
+  end
+
+  private
+
+  def authenticate_request
+    auth_header = request.headers['Authorization']
+    if auth_header
+      token = auth_header.split(' ').last
+      decoded = TokenService.decode(token)
+      user = User.where(email: decoded[:email]).first
+      session[:user] = @user
+      puts "Sessão criada com sucesso! #{decoded[:email]}"
+    end
+  end
+
+  def hard_logout
+    reset_session
+    puts "Request executed successfully.....100%"
   end
 end
