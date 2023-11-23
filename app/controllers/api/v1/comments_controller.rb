@@ -1,8 +1,8 @@
 class Api::V1::CommentsController < ApplicationController
   load_and_authorize_resource
   skip_before_action :authenticate_user!, :verify_authenticity_token
-  before_action :authenticate_request
   after_action :hard_logout
+  before_action :authenticate_request
 
   skip_authorization_check only: [:create]
 
