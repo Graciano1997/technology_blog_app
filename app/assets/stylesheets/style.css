@@ -9,7 +9,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  height:100vh;
 }
 
 header nav img {
@@ -39,8 +39,8 @@ nav a {
 
 .sharedLink a {
   font-weight: 700;
-  font-style: oblique;
-  color: rgba(97, 26, 26, 0.849);
+  padding: 0.5px;
+  color: black;
 }
 
 .userBio {
@@ -119,11 +119,11 @@ nav a {
 .likeButton,
 .deleteButton {
   border: transparent;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 8px;
   cursor: pointer;
-  background-color: rgb(7, 0, 0);
-  color: #d3c3c3;
+  background-color: #fff;
+  color: black;
 }
 
 .likeButton {
@@ -204,19 +204,32 @@ nav a {
 }
 
 .formSection {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:100vh;
+  background: url('light.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
 }
 
 .formSection form {
   display: flex;
   flex-direction: column;
+  color:white;
 }
 
 .formSection form input,
 .formSection form textarea {
   margin: 1rem 0 1rem 0;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 8px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: white;
+  font-weight: 700;
 }
 
 header {
@@ -274,7 +287,7 @@ header nav {
 .rememberField {
   display: flex;
   gap: 1rem;
-  align-items: baseline;
+  align-items: center;
 }
 
 .rememberField label {
@@ -283,10 +296,10 @@ header nav {
 
 .login button {
   border: transparent;
-  padding: 0.4rem;
+  padding: 0.3rem;
   border-radius: 8px;
   cursor: pointer;
-  background-color: rgb(7, 0, 0);
+  /* background-color: rgb(7, 0, 0); */
   color: #d3c3c3;
 }
 
@@ -304,4 +317,25 @@ header nav {
   display: flex;
   justify-content: flex-end;
   margin-right: 0.1rem;
+}
+
+/*Hosanna Blog tech*/
+
+#hosanna{
+  padding: 8px;
+  text-align: right;
+  color:#fff;
+  font-size: 35px;
+}
+
+
+
+@media screen and (min-width:768px){
+  .formSection form {
+   width:400px; 
+   align-self: center;
+  }
+  .titleHeader{
+    text-align: center;
+  }
 }
