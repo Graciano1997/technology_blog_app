@@ -1,7 +1,26 @@
-<header>
+<div class="hamburguerButton">
+        <h1> Hosanna Tech Blog</h1>
+<button id="hamburguer"><i class="fa-solid fa-bars"></i></button>
+</div>
+
+<header class="header">
+    <div class="logoClose">
+    <h1> Hosanna Tech Blog</h1>
+    <button id="closeHamburguer">X</button>
+    </div>
 <nav>
-<a href="/"><%= image_tag "home.svg", alt: "Home"%></a>
-<a href=<%="/users/#{session[:user]['id']}/posts/new"%>><%= image_tag "post.svg", alt: "new Post"%></a>
-<a href="/logout" class="logout"><button type="button">Logout</button></a>
+<ul>
+    <li>
+<a href="/"><%= image_tag "home.svg", alt: "Home"%>Home</a>
+    </li>
+        <li>
+<a href=<%="/users/#{session[:user]['id']}/posts/new"%>><%= image_tag "post.svg", alt: "new Post"%>New Post</a>
+    </li>
+        <li>
+
+<a href="/logout" class="logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+    </li>
+
+</ul>
 </nav>
 </header>

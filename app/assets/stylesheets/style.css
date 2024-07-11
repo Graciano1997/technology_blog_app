@@ -9,20 +9,29 @@
 .bodyItem{
   display: flex;
   flex-direction: column;
-  height:100%;
-    background: url('light.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  height:100vh;
+  background: url('light.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .container {
   display: flex;
   flex-direction: column;
 }
 
-.notice,.alert{color: white;}
+.notice,
+.alert{
+  color: white;
+}
 
-header nav img {
+.header nav li a  img {
+  margin-right: 10px;
   height: 50%;
+}
+
+.header nav li a  i{
+  margin-right: 10px;
 }
 
 nav a {
@@ -35,6 +44,18 @@ nav a {
   align-items: center;
   column-gap: 30px;
   padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+#hamburguer{
+  padding: 20px;
+  background-color: transparent;
+  border: transparent;
+}
+
+#hamburguer i{
+  font-size: 20px;
+
+  color: white;
 }
 
 .postItemContainer {
@@ -252,20 +273,57 @@ nav a {
   resize: vertical;
 }
 
-header {
+.header {
   position: fixed;
-  height: 3rem;
+  height: 100%;
   top: 0;
-  width: 100%;
+  background:white;
+  width: 100vw;
+  left: -120%;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s ease-in-out;
 }
 
-header nav {
+.showHeader{
+  left: 0;
+}
+
+.header nav ul {
+  margin-top: 2rem;
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 8px;
+  /* display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1rem;
+  gap: 20px;
   height: 100%;
-  padding: 5px 3rem 5px 0;
+  padding: 5px 3rem 5px 0; */
+}
+
+
+.header nav ul li{
+list-style-type: none;
+transition: all 1s ease-in-out;
+border: 1px solid transparent;
+padding: 10px;
+}
+
+.header nav ul li:hover,
+.header nav ul li:active,
+.header nav ul li:focus{
+  border: 1px solid pink;
+  box-shadow: 0 0 5px 6px palevioletred;
+}
+
+
+
+
+.header nav ul li a{
+  text-decoration: none;
+  color:black;
 }
 
 .postOperations {
@@ -348,8 +406,43 @@ header nav {
   font-size: 35px;
 }
 
+.hamburguerButton{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburguerButton h1{
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+.hamburguerButton button{
+  cursor: pointer;
+}
 
+.logoClose{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
 
+.logoClose h1{
+  color: palevioletred;
+}
+
+#closeHamburguer{
+padding: 10px;
+background-color: rgba(30, 29, 29, 0.937);
+color: white;
+border: transparent;
+transition: all 1s ease-in-out;
+cursor: pointer;
+}
+
+#closeHamburguer:hover{
+  box-shadow: 0 0px 4px 4px palevioletred;
+  color: rgb(229, 115, 153);
+}
 @media screen and (min-width:768px){
   .formSection form {
    width:400px; 
