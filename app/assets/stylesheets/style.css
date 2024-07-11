@@ -6,11 +6,20 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+.bodyItem{
+  display: flex;
+  flex-direction: column;
+  height:100%;
+    background: url('light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .container {
   display: flex;
   flex-direction: column;
-  height:100vh;
 }
+
+.notice,.alert{color: white;}
 
 header nav img {
   height: 50%;
@@ -40,7 +49,14 @@ nav a {
 .sharedLink a {
   font-weight: 700;
   padding: 0.5px;
-  color: black;
+  color: #fff;
+  text-decoration: none;
+  transition: all 2s 2s ease-in-out;
+}
+
+.sharedLink a:hover{
+  text-decoration: underline;
+  padding: 10px;
 }
 
 .userBio {
@@ -232,6 +248,10 @@ nav a {
   font-weight: 700;
 }
 
+.formSection form textarea{
+  resize: vertical;
+}
+
 header {
   position: fixed;
   height: 3rem;
@@ -321,7 +341,7 @@ header nav {
 
 /*Hosanna Blog tech*/
 
-#hosanna{
+.hosanna{
   padding: 8px;
   text-align: right;
   color:#fff;
