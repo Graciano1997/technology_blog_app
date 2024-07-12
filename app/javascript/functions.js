@@ -1,10 +1,18 @@
-const hamburguer=document.querySelector('#hamburguer');
-const closeHamburguer=document.querySelector('#closeHamburguer');
+    if(hamburguer){
+        hamburguer.addEventListener("click",(el)=>{
+            document.querySelector('.header').classList.add('showHeader');
+        });
+    }
 
-hamburguer.addEventListener("click",(el)=>{
-    document.querySelector('.header').classList.toggle('showHeader');
-});
-
-closeHamburguer.addEventListener("click",(el)=>{
-    document.querySelector('.header').classList.remove('showHeader');
-});
+    if(closeHamburguer){
+        closeHamburguer.addEventListener("click",(el)=>{
+            document.querySelector('.header').classList.remove('showHeader');
+        });
+    }
+    if(hosannaH){
+        hosannaH.addEventListener("click",()=>{
+            document.querySelector('.header').classList.remove('showHeader');
+            window.location.href="/";
+        });
+    }
+            

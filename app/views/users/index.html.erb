@@ -1,10 +1,37 @@
+<section class="mainSection">
+    <div class="wellcome">
+        <h1>BE WELLCOME AT YOUR TECH BLOG APP</h1>
+    </div>
+
+    <div class="info">
+    <div class="mission">
+        <h2>*Our Mission</h2>
+        <p>Empower and inspire the tech community.</p>
+        <p>We aim to bridge the gap between complex technological advancements.</p>
+        <p>we are here to make technology accessible and understandable for everyone.
+        </p>
+    </div>
+        <div class="mission">
+        <h2>*Instructions</h2>
+            <p>You Create your Posts.</p>
+            <p>You can comment your and other user's Posts.</p>
+            <p>You only can delete your comments or Your Posts.</p>
+            <p>Click in the User name and it will navigate you to the Posts.</p>
+            <b>Please Be Kind!</b>
+        </ul>
+
+
+     
+    </div>
+    </div>
+    <div class="ourUsers">
+    <h1>Our Users</h1>
 <%@users.each do |user| %>
 <%= render partial: "users/user", locals: {user: user}%>
 <%end%>
+    </div>
 
-
-
-
+</section>
 
 
 

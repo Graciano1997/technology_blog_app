@@ -9,7 +9,6 @@
 <%else%>
  <p id="commentor"><%="None!"%>:</p>
 <%end%>
-
 </div>
 <div class="trashContainer">
 <% if(comment.user_id==session[:user]["id"] || session[:user]["role"].to_s.eql?("admin"))%>
