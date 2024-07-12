@@ -13,16 +13,16 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
   # key such as config/credentials/production.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
 
-  # Enable static file serving from the `/public` folder (turn off if using NGINX/Apache for it).
-  config.public_file_server.enabled = true
-
+  # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
+  # config.public_file_server.enabled = false
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || ENV['RENDER'].present?
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
@@ -68,8 +68,8 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
-  # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "blog_app_production"
+  # config.active_job.queue_adapter = :resque
+  # config.active_job.queue_name_prefix = "budget_app_production"
 
   config.action_mailer.perform_caching = false
 
@@ -87,16 +87,11 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
- config.action_controller.raise_on_missing_callback_actions = true
-     config.action_mailer.delivery_method = :smtp
-     config.action_mailer.smtp_settings = {
-     address: 'smtp.gmail.com',
-     port: 587,
-     domain: 'gmail.com',
-     user_name: 'gracianomanuelhenrique@gmail.com',
-     password: 'ucaz lxzk yrxe ises',
-     authentication: 'plain',
-     enable_starttls_auto: true
-   }
-
+  # Enable DNS rebinding protection and other `Host` header attacks.
+  # config.hosts = [
+  #   "example.com",     # Allow requests from example.com
+  #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
+  # ]
+  # Skip DNS rebinding protection for the default health check endpoint.
+  # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end
