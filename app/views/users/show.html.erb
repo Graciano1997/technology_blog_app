@@ -5,6 +5,8 @@
 <%end%>
 </div>
 
+<% if(!@user.user_recent_posts.count.zero?)%>
 <div class="seeAll">
 <a href=<%="/users/#{@user.id}/posts"%>><button type="button"> See all posts</button></a>
 </div>
+<%end%>
