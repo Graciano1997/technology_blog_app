@@ -6,9 +6,10 @@
   font-family: 'PT Sans', sans-serif;
 }
 
-.bodyItem{
+.bodyItem {
   display: flex;
   flex-direction: column;
+
   /* height:100vh; */
   height: max-content;
   background: url('light.jpg');
@@ -22,16 +23,16 @@
 }
 
 .notice,
-.alert{
+.alert {
   color: white;
 }
 
-.header nav li a  img {
+.header nav li a img {
   margin-right: 10px;
   height: 50%;
 }
 
-.header nav li a  i{
+.header nav li a i {
   margin-right: 10px;
 }
 
@@ -43,15 +44,14 @@ nav a {
   padding: 10px;
 }
 
-#hamburguer{
+#hamburguer {
   padding: 20px;
   background-color: transparent;
   border: transparent;
 }
 
-#hamburguer i{
+#hamburguer i {
   font-size: 20px;
-
   color: white;
 }
 
@@ -72,7 +72,7 @@ nav a {
   transition: all 2s 2s ease-in-out;
 }
 
-.sharedLink a:hover{
+.sharedLink a:hover {
   text-decoration: underline;
   padding: 10px;
 }
@@ -120,26 +120,28 @@ nav a {
 .userDetails {
   display: flex;
   justify-content: space-between;
-  margin: 0.5rem;
+  margin: 2rem;
   border: 2px solid white;
   border-radius: 8px;
-  width: 100%;
-  align-self: center;
+
+  /* width: 90%; */
+
+  /* align-self: center; */
 }
 
-.userDetails h2{
+.userDetails h2 {
   font-size: 20px;
 }
 
-.userDetails h2 a { 
+.userDetails h2 a {
   text-decoration: none;
   transition: all 1s ease-in-out;
- }
+}
 
- .userDetails h2 a:hover{
+.userDetails h2 a:hover {
   box-shadow: 0 0 8px 5px white;
   padding: 2px;
- }
+}
 
 #numberPosts {
   margin-top: 3rem;
@@ -234,7 +236,8 @@ nav a {
   display: flex;
   gap: 0.5rem;
 }
-.userInfo p{
+
+.userInfo p {
   font-weight: 700;
 }
 
@@ -267,17 +270,18 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height:100vh;
+  height: 100vh;
+
   /* background: url('light.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
-  color:white;
+  color: white;
 }
 
 .formSection form {
   display: flex;
   flex-direction: column;
-  color:white;
+  color: white;
 }
 
 .formSection form input,
@@ -291,7 +295,7 @@ nav a {
   font-weight: 700;
 }
 
-.formSection form textarea{
+.formSection form textarea {
   resize: vertical;
   overflow-y: scroll;
 }
@@ -300,16 +304,16 @@ nav a {
   position: fixed;
   height: 100%;
   top: 0;
-  background:white;
+  background: white;
   width: 100vw;
   left: -120%;
   display: flex;
   flex-direction: column;
   transition: all 1s ease-in-out;
-  z-index:2000;
+  z-index: 2000;
 }
 
-.showHeader{
+.showHeader {
   left: 0;
 }
 
@@ -319,6 +323,7 @@ nav a {
   flex-direction: column;
   gap: 20px;
   padding: 8px;
+
   /* display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -327,27 +332,23 @@ nav a {
   padding: 5px 3rem 5px 0; */
 }
 
-
-.header nav ul li{
-list-style-type: none;
-transition: all 1s ease-in-out;
-border: 1px solid transparent;
-padding: 10px;
+.header nav ul li {
+  list-style-type: none;
+  transition: all 1s ease-in-out;
+  border: 1px solid transparent;
+  padding: 10px;
 }
 
 .header nav ul li:hover,
 .header nav ul li:active,
-.header nav ul li:focus{
+.header nav ul li:focus {
   border: 1px solid pink;
   box-shadow: 0 0 5px 6px palevioletred;
 }
 
-
-
-
-.header nav ul li a{
+.header nav ul li a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
 .postOperations {
@@ -374,7 +375,7 @@ padding: 10px;
   padding-bottom: 1rem;
   font-size: 24px;
   text-align: center;
-  color: white
+  color: white;
 }
 
 .loginSection {
@@ -403,6 +404,7 @@ padding: 10px;
   padding: 0.3rem;
   border-radius: 8px;
   cursor: pointer;
+
   /* background-color: rgb(7, 0, 0); */
   color: #d3c3c3;
 }
@@ -423,67 +425,72 @@ padding: 10px;
   margin-right: 0.1rem;
 }
 
-/*Hosanna Blog tech*/
+/* Hosanna Blog tech */
 
-.hosanna{
+.hosanna {
   padding: 8px;
   text-align: right;
-  color:#fff;
+  color: #fff;
   font-size: 35px;
 }
 
-.hamburguerButton{
+.hamburguerButton {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.hamburguerButton h1{
+
+.hamburguerButton h1 {
   padding: 10px;
   cursor: pointer;
   color: white;
 }
-.hamburguerButton button{
+
+.hamburguerButton button {
   cursor: pointer;
 }
 
-.logoClose{
+.logoClose {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
 }
 
-.logoClose h1{
+.logoClose h1 {
   color: palevioletred;
 }
 
-#closeHamburguer{
-padding: 10px;
-background-color: rgba(30, 29, 29, 0.937);
-color: white;
-border: transparent;
-transition: all 1s ease-in-out;
-cursor: pointer;
+#closeHamburguer {
+  padding: 10px;
+  background-color: rgba(30, 29, 29, 0.937);
+  color: white;
+  border: transparent;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
 }
 
-#closeHamburguer:hover{
-  box-shadow: 0 0px 4px 4px palevioletred;
+#closeHamburguer:hover {
+  box-shadow: 0 0 4px 4px palevioletred;
   color: rgb(229, 115, 153);
 }
-@media screen and (min-width:768px){
+
+@media screen and (min-width: 768px) {
   .formSection form {
-   width:400px; 
-   align-self: center;
+    width: 400px;
+    align-self: center;
   }
-  .titleHeader{
+
+  .titleHeader {
     text-align: center;
   }
 }
 
-.delete-icon{
+.delete-icon {
   width: 20px;
   height: 20px;
 }
-.commentWrapper{
+
+.commentWrapper {
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -492,7 +499,7 @@ cursor: pointer;
   align-items: center;
 }
 
-.newPost form{
+.newPost form {
   width: 80%;
   height: 80%;
 }
@@ -504,37 +511,39 @@ cursor: pointer;
   max-height: auto;
 }
 
-@media screen and (max-width:767px){
-  .newPost form{
+@media screen and (max-width: 767px) {
+  .newPost form {
     align-self: center;
-  } 
+  }
+
   .richText {
     height: 180px;
   }
 }
+
 .seeAll button:hover,
-.pagination button:hover{
+.pagination button:hover {
   box-shadow: 0 0 8px 9px rgb(36, 35, 35);
 }
 
-.mainSection{
+.mainSection {
   height: 120vh;
   overflow-y: auto;
 }
 
-.wellcome{
+.wellcome {
   margin-top: 5rem;
   display: flex;
   color: white;
   justify-content: center;
 }
 
-.wellcome h1{
+.wellcome h1 {
   font-size: calc(30px + 50% + 2pt);
   text-align: center;
 }
 
-.mission{
+.mission {
   background-color: white;
   border-radius: 8px;
   padding: 10px;
@@ -542,13 +551,15 @@ cursor: pointer;
   margin-top: 5rem;
   font-size: 14px;
 }
-.info{
+
+.info {
   display: flex;
   justify-content: space-around;
   padding: 20px;
   gap: 20px;
 }
-.ourUsers{
+
+.ourUsers {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -558,7 +569,7 @@ cursor: pointer;
   height: 100px;
 }
 
-.ourUsers h1{
+.ourUsers h1 {
   color: white;
   font-size: calc(40% +30px +10pt);
 }

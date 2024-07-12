@@ -1,5 +1,5 @@
+<div class="indexWrapper">
 <%= render partial: "users/user", locals:{user:@user}%>
-
 <%@user_posts.each_with_index do |post,index|%>
 <div class="postCommentsContainer">
 <%= render partial: "posts/post", locals: {post:post, index:index, user:@user,like:@like}%>
@@ -12,3 +12,4 @@
 </div>
 </div>
 <%end%>
+</div>

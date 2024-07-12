@@ -1,11 +1,8 @@
 class LikesController < ApplicationController
   def create
     @user = User.where(email: session[:user]['email']).first
-    @like = Like.create(user: @user, post_id: params[:post_item_id])
-    if @like.new_record?
-      puts 'Ups!can not like'
-    else
-      puts 'One more like'
-    end
+
+    @zero = @user.posts[(params[:post_item_id].to_i - 1)].likes.where(user_id: @user.id).count.zero?
+    @like = Like.create(user: @user, post_id: params[:post_item_id]) if @zero
   end
 end
