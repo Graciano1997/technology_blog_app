@@ -94,4 +94,19 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  # 
+  #
+  config.action_mailer.default_url_options = { host: 'https://hosanna-tech-blog.onrender.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'gmail.com',
+    user_name: 'gracianomanuelhenrique@gmail.com',
+    password: 'ucaz lxzk yrxe ises',
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+  
+  Rails.application.routes.default_url_options[:host] = 'https://hosanna-tech-blog.onrender.com'
 end
