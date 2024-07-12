@@ -1,6 +1,6 @@
 module Api
   module V1
-    class Api::V1::PostsController < ApplicationController
+    class PostsController < ApplicationController
       load_and_authorize_resource
       skip_before_action :authenticate_user!
       before_action :authenticate_request
