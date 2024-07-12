@@ -15,7 +15,7 @@
 <%= form_with(url: "/delete/post/#{post_item.id}", method: :delete) do |form| %>
   <%= form.hidden_field :post_item_id, value: post_item.id %>
   <%= button_tag type: 'submit', class:'likeButton' do %>
-    <%= image_tag "trash", alt: 'Delete', class: 'like-icon' %>
+    <%= image_tag "trashIcon.svg", alt: 'Delete', class: 'like-icon' %>
   <% end %>
 <% end %>
 </section>
