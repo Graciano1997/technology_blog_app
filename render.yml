@@ -8,7 +8,7 @@ services:
     name: hosanna_tech_blog
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec rails server"
+    startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
