@@ -2,6 +2,7 @@ databases:
   - name: hosanna_db
     databaseName: hosanna_db
     user: hosanna_db_user
+    plan: free
 
 services:
   - type: web
