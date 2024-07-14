@@ -3,13 +3,6 @@
 <%@user_posts.each_with_index do |post,index|%>
 <div class="postCommentsContainer">
 <%= render partial: "posts/post", locals: {post:post, index:index, user:@user,like:@like}%>
-<div class="comments">
-<% post.show_post_comments(post).each do |comment|%>
-<div class="commentWrapper">
-<%= render partial: "comments/comment", locals: {comment:comment, user:@user.find_user(comment.user_id)}%>
-</div>
-<%end%>
-</div>
 </div>
 <%end%>
 </div>
