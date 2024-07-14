@@ -9,9 +9,6 @@
 .bodyItem {
   display: flex;
   flex-direction: column;
-
-  /* height:100vh; */
-  height: max-content;
   background: url('light.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -178,6 +175,11 @@ nav a {
   transition: all 1s ease-in-out;
 }
 
+.formSection form input[type="submit"]{
+  width: 70px;
+  align-self: center;
+}
+
 .likeButton {
   background-color: transparent;
   transition: all 0.6s 0.4s ease-in-out;
@@ -270,9 +272,6 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-
-  /* background: url('light.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -440,10 +439,12 @@ nav a {
   align-items: center;
 }
 
-.hamburguerButton h1 {
-  padding: 10px;
+.hamburguerButton h1,
+.logoClose h1 {
+  padding: 1rem;
   cursor: pointer;
   color: white;
+  font-size: calc(60% + 5px + 4pt);
 }
 
 .hamburguerButton button {
@@ -458,6 +459,7 @@ nav a {
 
 .logoClose h1 {
   color: palevioletred;
+  padding: 0.5rem;
 }
 
 #closeHamburguer {
@@ -509,6 +511,7 @@ nav a {
   border-radius: 8px;
   height: 200px;
   max-height: auto;
+  border: 1px solid white;
 }
 
 @media screen and (max-width: 767px) {
@@ -572,4 +575,19 @@ nav a {
 .ourUsers h1 {
   color: white;
   font-size: calc(40% +30px +10pt);
+}
+
+footer{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.759);
+  color: white;
+  padding: 0.5rem;
+  height: 250px;
+}
+
+footer h2{
+  font-size: 12px;
 }

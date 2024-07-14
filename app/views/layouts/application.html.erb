@@ -17,6 +17,11 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   </div>
+  <% if (session.key?(:user))%>
+  <footer>
+    <h2>Developed by Graciano Henrique</h2>
+  </footer>
+  <%end%>
   </body>
   <%= javascript_include_tag 'functions' %>
 </html>
