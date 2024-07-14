@@ -6,6 +6,9 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+.full{
+  height: 100vh;
+}
 .bodyItem {
   display: flex;
   flex-direction: column;
@@ -176,8 +179,12 @@ nav a {
 }
 
 .formSection form input[type="submit"]{
-  width: 70px;
   align-self: center;
+  transition: all 1s ease-in-out;
+}
+
+.formSection form input[type="submit"]:hover{
+  box-shadow: 0 0 20px 3px rgba(73, 69, 69, 0.934);
 }
 
 .likeButton {
@@ -322,13 +329,6 @@ nav a {
   flex-direction: column;
   gap: 20px;
   padding: 8px;
-
-  /* display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 20px;
-  height: 100%;
-  padding: 5px 3rem 5px 0; */
 }
 
 .header nav ul li {
@@ -343,6 +343,13 @@ nav a {
 .header nav ul li:focus {
   border: 1px solid pink;
   box-shadow: 0 0 5px 6px palevioletred;
+}
+
+.header nav ul li:last-child:hover,
+.header nav ul li:last-child:active,
+.header nav ul li:last-child:focus {
+  border: 1px solid red;
+  box-shadow: 0 0 5px 6px red;
 }
 
 .header nav ul li a {
@@ -508,10 +515,12 @@ nav a {
 
 .richText {
   overflow-y: scroll;
+  overflow-wrap: break-word;
   border-radius: 8px;
-  height: 200px;
+  min-height: 200px;
   max-height: auto;
   border: 1px solid white;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -520,7 +529,7 @@ nav a {
   }
 
   .richText {
-    height: 180px;
+    min-height: 180px;
   }
 }
 
@@ -535,7 +544,7 @@ nav a {
 }
 
 .wellcome {
-  margin-top: 5rem;
+  margin-top: 10rem;
   display: flex;
   color: white;
   justify-content: center;
@@ -553,6 +562,20 @@ nav a {
   color: black;
   margin-top: 5rem;
   font-size: 14px;
+}
+
+.mission p{
+  padding: 10px;
+}
+
+#bekind{
+  text-align: center;
+  font-weight: bold;
+}
+
+.mission h2{
+  text-align: center;
+  color: palevioletred;
 }
 
 .info {
@@ -590,4 +613,17 @@ footer{
 
 footer h2{
   font-size: 12px;
+}
+
+.functionalities{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.functionalities li{
+  margin-left: 15px;
+  color: green;
+  font-size: 15px;
 }

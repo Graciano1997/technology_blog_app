@@ -1,5 +1,5 @@
 <%= render "devise/shared/header"%>
-<section class="formSection">
+<section class="formSection full">
 <h2 class="titleHeader">Login</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|%>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Enter your Email" %>
