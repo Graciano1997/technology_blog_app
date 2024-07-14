@@ -122,9 +122,9 @@ nav a {
   justify-content: space-between;
   margin: 1rem;
   border: 2px solid white;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 15px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 .userDetails h2 {
