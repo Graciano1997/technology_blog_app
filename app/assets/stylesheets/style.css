@@ -120,13 +120,11 @@ nav a {
 .userDetails {
   display: flex;
   justify-content: space-between;
-  margin: 2rem;
+  margin: 1rem;
   border: 2px solid white;
   border-radius: 8px;
-
-  /* width: 90%; */
-
-  /* align-self: center; */
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .userDetails h2 {
@@ -134,17 +132,18 @@ nav a {
 }
 
 .userDetails h2 a {
+  color: white;
   text-decoration: none;
   transition: all 1s ease-in-out;
 }
 
 .userDetails h2 a:hover {
   box-shadow: 0 0 8px 5px white;
-  padding: 2px;
+  padding: 1px;
 }
 
 #numberPosts {
-  margin-top: 3rem;
+ color: white;
 }
 
 #postsIndex {
