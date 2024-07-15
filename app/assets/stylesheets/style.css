@@ -110,7 +110,7 @@ nav a {
   width: 16px;
   height: 16px;
   transform: scale(1.3);
-  transition: all 0.6s 0.4s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .userPhotograph img:hover {
@@ -364,11 +364,18 @@ nav a {
   gap: 0.5rem;
 }
 
+.op a{
+  text-decoration: none;
+}
+
 .likeButton img:hover {
   transform: scale(1.5);
 }
 
-.likeButton:hover { background-color: rgba(255, 255, 0, 0.377); }
+.likeButton:hover { 
+  background-color: white;
+  box-shadow:0 0 12px 4px palevioletred;
+ }
 
 .deleteButton:hover {
   background-color: transparent;
@@ -623,4 +630,14 @@ footer h2{
   margin-left: 15px;
   color: green;
   font-size: 15px;
+}
+
+
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
 }

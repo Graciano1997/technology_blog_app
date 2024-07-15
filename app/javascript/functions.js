@@ -15,4 +15,13 @@
             window.location.href="/";
         });
     }
-            
+
+    if(comentArea){
+        comentArea.addEventListener('input',(el)=>{
+            if(el.target.value!==''){
+                document.querySelector('.comentButton').classList.replace('hide','show');
+            }else{
+                document.querySelector('.comentButton').classList.replace('show','hide');
+            }
+        })
+    }

@@ -9,3 +9,4 @@ const hamburguer=document.querySelector('#hamburguer');
 const closeHamburguer=document.querySelector('#closeHamburguer');
 const hosannaH=document.querySelector('#hosannaH');
 const navLinks=document.querySelectorAll('.linkList li');
+const comentArea=document.querySelector('#comentArea');
