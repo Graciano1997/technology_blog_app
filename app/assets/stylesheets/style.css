@@ -206,6 +206,7 @@ nav a {
 
 .commentItemContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 5px 5px 5px 5px;
   background-color: rgba(110, 16, 16, 0.205);
@@ -216,6 +217,7 @@ nav a {
 
 .authorCommentItemContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 5px 5px 5px 5px;
   background-color: rgba(128, 162, 212, 0.315);
@@ -226,6 +228,10 @@ nav a {
 
 .authorCommentItemContainer button {
   align-items: end;
+}
+
+#commentText{
+  text-wrap: wrap;
 }
 
 #commentor,
@@ -510,6 +516,7 @@ nav a {
   border-radius: 8px;
   margin: 8px;
   align-items: center;
+  height: max-content;
 }
 
 .newPost form {
@@ -631,8 +638,6 @@ footer h2{
   color: green;
   font-size: 15px;
 }
-
-
 
 .hide{
   display: none;

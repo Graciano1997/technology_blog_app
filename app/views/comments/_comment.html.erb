@@ -4,8 +4,12 @@
 <div class="commentItemContainer">
 <%end%>
 <%if(comment.text.size>0) %>
+<%if(comment.post.author_id==session[:user]["id"])%>
+ <p id="commentor">Author:</p>
+<%else%>
  <p id="commentor"><%=user.name%>:</p>
-<p><%= comment.text%></p></>
+ <%end%>
+<p id="commentText"><%= comment.text%></p>
 <%else%>
  <p id="commentor"><%="None!"%>:</p>
 <%end%>
